@@ -1,0 +1,150 @@
+<?php
+session_start();
+include('functions.php');
+if (!isLoggedIn()) 
+{
+	$_SESSION['msg'] = "You must log in first";
+	header('location: login.html');
+}
+
+
+?>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="Chrome">
+    <meta name="viewport" content="widul = device-widul, initial scale = 1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+
+    <link rel="stylesheet" type="text/css" href="bootstrapstyle.css">
+    </head>
+<title> Personal details </title>
+<body style="background-color:#99ccff;">
+<legend>
+<form name = "XYZ" action = "insert.php" method = "post">
+<input type = "hidden" name="submitted" value = "true" /> 
+    <div class="container"> 
+        <div class = "Jumbotron text-center">
+    <h1 align = "center" style="color:red;">Personal Details</h1>
+    </div>
+	<legend> XYZ Registration</legend>
+	<div align = "right"><h3><a href = "logout.php"> logout </a></h3></div></align>
+	</align>
+  <label>First name:</label> <br> <input type="text" name="firstname" value=" " required>
+  <br><br>
+  <label>Last name:</label> <br> <input type="text" name="lastname" value=" " required>
+    <br><br>
+
+<div class = "select">
+<label>Experience:</label> 
+<select>
+<option value = "Student"><b>Student</b></option>
+<option value = "Entry level"><b>Entry level</b></option>
+<option value = "Experienced"><b>Experienced</b></option>
+</select>
+</div>
+
+<div>
+    <br><br>
+    <label>Education</label>
+    <br><br> 
+   
+    <ul class="col-sm-6 col-md-3 last list-unstyled"><label>Degree</label>
+	 <li> <input type="text" size="15" name="Degree1" id ="t1" required></li>
+	  <li> <input type="text" size="15" name="Degree2" id ="t6" required></li>
+	</ul>
+    <ul class="col-sm-6 col-md-3 last list-unstyled"><label>Major</label>
+	<li> <input type="text" size="15" name="Major1" id ="t2" required></li>
+	<li> <input type="text" size="15" name="Major2" id ="t7" required></li>
+	</ul>
+   <ul class="col-sm-6 col-md-3 last list-unstyled"><label>School</label>
+	<li> <input type="text" size="15" name="School1" id ="t3" required></li>
+	<li> <input type="text" size="15" name="School2" id ="t8" required></li>
+                           
+	</ul>
+    <ul class="col-sm-6 col-md-3 last list-unstyled"><label>Passing Year</label>
+	 <li> <input type="text" size = "15" name="Year1" id ="t4" required></li>
+	 <li> <input type="text" size = "15" name="Year2" id ="t9" required></li>
+                            
+	</ul>
+	
+    <br><br><br><br>
+ <label>Certifications:</label>
+    <br>
+    <input type = "text" size = "25" name = "certification">
+    <br> <br>
+    <input type = "text" size = "25" name = "certification1">
+	<br><br>
+	
+    <label>Skills:</label>
+    <br>
+    <textarea rows = "3" cols = "20">
+	
+	</textarea>
+	
+    <br> <br>
+	
+	<label>Accomplishments</label>
+	 <li> <input type="text" size = "15" name="Accomplishments" id ="t5"></li>
+	 <li> <input type="text" size = "15" name="Accomplishments2" id ="t10"></li>
+	 <li> <input type="text" size = "15" name="Accomplishments3" id ="t10"></li>
+       
+	</ul>
+    <br><br>
+   <div align = "left"><label>Current location</label></div>
+    
+    
+        <ul class="col-sm-6 col-md-3 last list-unstyled"><label>city</label>
+		<li><input type = "text" size = "15" name = "City" required></li></ul>
+        <ul class="col-sm-6 col-md-3 last list-unstyled"><label>state</label>
+                
+                <li><input type = "text" size = "15" name = "location" required></li>
+        </ul>
+<br><br><br>
+<br><br><br><br>
+<label>Willing to Relocate</label>
+<br><br>
+<input type = "radio" name = "Option" value ="Relocate">Yes<br>
+<input type = "radio" name = "Option" value ="No Relocate">No<br>
+    <br><br>
+
+<label>Upload Resume:</label> <input type = "file" name ="Choosefile">
+<br><br>
+
+<label>Date of Availability</label>
+<br><input type = "date" name = "Availability" required>
+
+<br><br>
+
+<label>Telephone:</label>
+<br>
+
+<input type = "number" size = "15" name = "TelephoneNumber" required>
+    
+ <br><br><br>
+    
+    <center><label><input type="submit" value="Register" /></label>
+    
+<label><input type = "Reset" value = "Reset" name = "Click"></label>
+
+
+    
+</center>
+</form>
+
+</div>
+
+</div>
+		
+		
+		
+		
+		
+</legend>		
+</body>
+</html>
+      
