@@ -1,0 +1,61 @@
+
+#wrapper
+{
+	width: 35%;
+	margin: 50px auto;
+	padding: 20px;
+}
+body
+{
+background: linear-gradient(to right, #0fb8ad, #1fc8db, #2cb5e8, #357ae8);
+}
+
+form
+{
+	width: 80%;
+    margin: 100px auto;
+    background-color: #2f70c0;
+    border: 2px solid #2615b0;
+    border-radius: 8px;
+    padding: 20px
+}
+
+fieldset
+{
+	background-color:#2f70c0;
+	width: 40%;
+	margin: auto;
+	border: 2px solid #2615b0;
+    border-radius: 8px;
+}
+input[type=text], input[type=password], input[type=email] 
+{
+    width: 100%;
+    padding: 15px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+	display: block;
+}
+button
+{
+    background-color: #2f499b;
+    color: white;
+    padding: 14px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+}
+
+
+form div
+{
+	margin: 3px auto;
+}
+
+.btn
+{
+	padding: 7px;
+	width: 100%;
+}
